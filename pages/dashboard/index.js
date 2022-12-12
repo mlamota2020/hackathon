@@ -142,7 +142,7 @@ export default function Example({ reports }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch('http://127.0.0.1:3000/api/reports')
+  const res = await fetch('https://hackathon-orcin.vercel.app/api/reports')
   const reports = await res.json()
 
   return {
