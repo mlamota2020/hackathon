@@ -14,7 +14,7 @@ export default function Example() {
             Uh oh! I think you&apos;re lost.
           </h1>
           <p className="mt-2 text-lg font-medium text-black text-opacity-50">
-            It looks like the page you&apos;re looking for doesn't exist.
+            It looks like the page you&apos;re looking for doesn&apos;t exist.
           </p>
           <div className="mt-6">
             <Link

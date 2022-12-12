@@ -1,6 +1,7 @@
 import { useSession, signIn } from 'next-auth/react'
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
+import Link from 'next/link'
 
 export default function Map() {
     const [open, setOpen] = useState(true)
