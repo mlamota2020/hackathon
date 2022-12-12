@@ -119,6 +119,13 @@ export default function Layout({ children, title, description, activePage }) {
                       <p className="text-sm on_primary_container_text truncate">{session.user.email}</p>
                     </div>
                   </div>
+                  <button
+        type="button"
+        className="inline-flex items-center ml-6 px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white tertiary_container hover:on_tertiary tertiary_text"
+        onClick={() => signOut()}
+      >
+        Cerrar sesión
+      </button>
                 </div>
                 </nav>
               </div>
