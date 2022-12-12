@@ -1,0 +1,11 @@
+{
+	"Connect to DB.": {
+		"scope": "javascript,javascriptreact",
+		"prefix": "dbconnect",
+		"body": [
+			"import { dbConnect } from 'utils/mongoose'",
+			"import User from 'models/User'"
+		],
+		"description": "Connect to DB."
+	}
+}
