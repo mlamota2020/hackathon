@@ -62,12 +62,12 @@ export default function Map() {
                                     >
                                         Iniciar sesión
                                     </button>
-                                    <a
-                                        href="/"
-                                        className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 on_secondary_container text-base font-medium secondary_container_text hover:secondary sm:mt-0 sm:col-start-1 sm:text-sm"
-                                    >
-                                        Volver
-                                    </a>
+                                    <Link
+                href="/"
+                  
+                >
+                  <a className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 on_secondary_container text-base font-medium secondary_container_text hover:secondary sm:mt-0 sm:col-start-1 sm:text-sm">Volver</a>
+                </Link>
                                 </div>
                             </div>
                         </Transition.Child>
