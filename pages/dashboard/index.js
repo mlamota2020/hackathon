@@ -42,6 +42,12 @@ export default function Example({ reports }) {
                   >
                     Reporte
                   </th>
+                  <th
+                    scope="col"
+                    className="px-6 py-3 text-left text-xs font-medium secondary_text uppercase tracking-wider"
+                  >
+                  Fecha de creación
+                  </th>
                 </tr>
               </thead>
               <tbody className="secondary_container divide-y divide-[#c0c6dd]">
@@ -62,6 +68,9 @@ export default function Example({ reports }) {
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="text-sm on_secondary_container_text">{item.report}</div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="text-sm on_secondary_container_text">{moment(item.createdAt).format('LLLL')}</div>
                     </td>
                   </tr>
                 ))}
