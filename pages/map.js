@@ -12,7 +12,6 @@ export default function Map() {
     if (status === 'authenticated') {
         return (
             <><div className="w-screen h-screen" id="mapview"></div>
-<Script src="/map/mapbox.js" />
 </>
         )
     } else {
