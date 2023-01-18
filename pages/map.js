@@ -2,6 +2,7 @@ import { useSession, signIn } from 'next-auth/react'
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import Link from 'next/link'
+import Script from 'next/script'
 
 export default function Map() {
     const [open, setOpen] = useState(true)
@@ -10,7 +11,9 @@ export default function Map() {
 
     if (status === 'authenticated') {
         return (
-            <><span className="hidden">holsaa</span><iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=-80.12174606323244%2C-2.252946844467618%2C-80.05007743835449%2C-2.2137520154983887&amp;layer=mapnik"></iframe></>
+            <><div className="w-screen h-screen" id="mapview"></div>
+<Script src="/map/mapbox.js" />
+</>
         )
     } else {
         return (
