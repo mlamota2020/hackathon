@@ -11,7 +11,80 @@ export default function Map() {
 
     if (status === 'authenticated') {
         return (
-            <><div className="w-screen h-screen" id="mapview"></div>
+            <>
+            <Link href="/dashboard">
+              <a className="on_primary_container p-5 rounded-full m-10 fixed top-1 left-1 shadow-md font-extrabold on_primary_text z-50">Volver</a>
+            </Link>
+            <div className="w-screen h-screen" id="mapview"></div>
+            <Script>
+                {`
+                mapboxgl.accessToken = 'pk.eyJ1IjoibWxhbW90YTIwMjAiLCJhIjoiY2xjNWdyZXplNTd4czNvcGxzenp3YnUydSJ9.vU6MF5MJ8j4SmrkhbW00wg';
+                const map = new mapboxgl.Map({
+                container: 'mapview',
+                style: 'mapbox://styles/mlamota2020/clc5h5f7e002y14n2jxh4xgtc',
+                center: [-80.082, -2.236],
+                zoom: 14,
+                });
+
+                const geojson = {
+                    type: 'FeatureCollection',
+                    features: [
+                      {
+                        type: 'Feature',
+                        geometry: {
+                          type: 'Point',
+                          coordinates: [-80.084, -2.240]
+                        },
+                        properties: {
+                          title: 'Colibrí',
+                          description: 'No se encuentra información de seguridad de esta zona.'
+                        }
+                      },
+                      {
+                        type: 'Feature',
+                        geometry: {
+                          type: 'Point',
+                          coordinates: [-80.080, -2.236]
+                        },
+                        properties: {
+                          title: 'Centro',
+                          description: 'No se encuentra información de seguridad de esta zona.'
+                        }
+                      },
+                      {
+                        type: 'Feature',
+                        geometry: {
+                          type: 'Point',
+                          coordinates: [-80.074, -2.231]
+                        },
+                        properties: {
+                          title: 'La Renta',
+                          description: 'No se encuentra información de seguridad de esta zona.'
+                        }
+                      }
+                    ]
+                  };
+
+                // add markers to map
+for (const feature of geojson.features) {
+  // create a HTML element for each feature
+  const el = document.createElement('div');
+  el.className = 'marker';
+
+  new mapboxgl.Marker(el)
+  .setLngLat(feature.geometry.coordinates)
+  .setPopup(
+    new mapboxgl.Popup({ offset: 25 }) // add popups
+      .setHTML(
+        \`<h3>\${feature.properties.title}</h3><p>\${feature.properties.description}</p>\`
+      )
+  )
+  .addTo(map);
+}
+
+                
+                `}
+            </Script>
 </>
         )
     } else {

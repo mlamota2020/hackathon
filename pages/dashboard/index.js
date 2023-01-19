@@ -16,7 +16,7 @@ export default function Example({ reports }) {
 
   return (
     <Layout title="Panel de control" description="Todo está aquí.">
-      <div className="max-w-none on_secondary lg:rounded-tl-3xl rounded-none h-[88.9vh]">
+      <div className="max-w-none on_secondary lg:rounded-tl-3xl lg:rounded-bl-3xl rounded-none h-full">
       <div className="flex flex-col md:w-2/3 sm:w-96 space-y-8 mx-6 md:mx-auto p-6">
       <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
@@ -66,7 +66,7 @@ export default function Example({ reports }) {
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="text-sm on_secondary_container_text">{item.title}</div>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
+                    <td className="px-6 py-4">
                       <div className="text-sm on_secondary_container_text">{item.report}</div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">

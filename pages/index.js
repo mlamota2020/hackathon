@@ -63,7 +63,7 @@ export default function Example() {
         <div className="max-w-7xl mx-auto pb-8 px-4 sm:px-6 lg:px-8">
           <div className="pt-8 md:flex md:items-center md:justify-center">
             <p className="mt-8 text-base text-neutral-400 text-center md:mt-0 md:order-1">
-              &copy; 2022 Reportex. Creado por Tecnobot.
+              &copy; 2023 Reportex. Creado por Tecnobot.
             </p>
           </div>
         </div>

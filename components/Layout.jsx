@@ -208,7 +208,7 @@ export default function Layout({ children, title, description, activePage }) {
         </div>
 
         <div className="flex-1 overflow-auto focus:outline-none">
-          <div className="relative z-10 flex-shrink-0 flex h-16 on_secondary lg:hidden visible">
+          <div className="z-10 flex-shrink-0 flex h-16 on_secondary lg:hidden visible sticky">
             <button
               className="px-4 text-neutral-400 focus:outline-none lg:hidden"
               onClick={() => setSidebarOpen(true)}
@@ -242,6 +242,9 @@ export default function Layout({ children, title, description, activePage }) {
               </div>
             </div>
             {children}
+            <Link href="/dashboard/reports/add">
+              <a className="on_primary_container p-5 rounded-full m-10 fixed bottom-0.5 right-0.5 shadow-md font-extrabold on_primary_text z-50 visible md:hidden">Crear</a>
+            </Link>
           </main>
         </div>
       </div>
