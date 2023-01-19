@@ -5,6 +5,7 @@ import Router from 'next/router'
 import Head from 'next/head'
 import nprogress from 'nprogress'
 import { SessionProvider } from 'next-auth/react'
+import Script from 'next/script'
 
 Router.events.on('routeChangeStart', nprogress.start)
 Router.events.on('routeChangeError', nprogress.done)
@@ -18,7 +19,7 @@ function MyApp({ Component, pageProps, session }) {
     <Head>
       <title>Reportex</title>
       <link rel="shortcut icon" href="/favicon.ico" />
-      <script src='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js'></script>
+      <Script src='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js' async />
       <link href='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css' rel='stylesheet' />
     </Head>
     <Component {...pageProps} />
