@@ -16,7 +16,7 @@ export default function Map() {
               <a className="on_primary_container p-5 rounded-full m-10 fixed top-1 left-1 shadow-md font-extrabold on_primary_text z-50">Volver</a>
             </Link>
             <div className="w-screen h-screen" id="mapview"></div>
-            <Script>
+            <Script id="mapscript">
                 {`
                 mapboxgl.accessToken = 'pk.eyJ1IjoibWxhbW90YTIwMjAiLCJhIjoiY2xjNWdyZXplNTd4czNvcGxzenp3YnUydSJ9.vU6MF5MJ8j4SmrkhbW00wg';
                 const map = new mapboxgl.Map({
