@@ -67,7 +67,7 @@ export default function Example({ reports }) {
                       <div className="text-sm on_secondary_container_text">{item.title}</div>
                     </td>
                     <td className="px-6 py-4">
-                      <div className="text-sm on_secondary_container_text">{item.report}</div>
+                      <div className="text-sm on_secondary_container_text w-96">{item.report}</div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="text-sm on_secondary_container_text">{moment(item.createdAt).format('LLLL')}</div>
